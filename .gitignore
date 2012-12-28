@@ -1,0 +1,10 @@
+# Exclude bundler cache
+/.bundle
+
+# Exclude IntellijIdea file
+/*.iml
+/.idea
+
+# Exclude output files
+/out/**
+!/out/.gitkeep

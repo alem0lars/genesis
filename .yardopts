@@ -1,0 +1,1 @@
+-o out/doc -m markdown lib/**/*.rb - README.md LICENSE.md Gemfile
