@@ -6,7 +6,6 @@ module Genesis
 
     class CreateProject
       include Genesis::Actions::BasicAction
-      include Genesis::ShellUtil
 
       def on_register
         { :name => :create_project }
@@ -170,19 +169,19 @@ module Genesis
 
             cmds = if gh_pages_exists
               [ 'git init',
-                "git remote add origin"\
-                    "git@github.com:#@user_name/#@repo_name.git",
-                'git checkout -b gh-pages',
-                'touch index.html',
-                'git add -A', 'git commit -m "init"',
-                'git push -u origin gh-pages'
-              ]
-            else
-              [ 'git init',
                 "git remote add -t gh-pages -f origin "\
                     "git@github.com:#@user_name/#@repo_name.git",
                 'git checkout gh-pages',
                 'git pull origin gh-pages'
+               ]
+            else
+              [ 'git init',
+                "git remote add origin "\
+                    "git@github.com:#@user_name/#@repo_name.git",
+                'git symbolic-ref HEAD refs/heads/gh-pages',
+                'touch index.html',
+                'git add -A', 'git commit -m "init"',
+                'git push -u origin gh-pages'
               ]
             end
             Dir.chdir(@prj_website_pth) do
