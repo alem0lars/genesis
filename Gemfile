@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'rake'
 gem 'rainbow'
+gem 'awesome_print'
 
 group :doc do
   gem 'yard'

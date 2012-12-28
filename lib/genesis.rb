@@ -1,4 +1,8 @@
+require 'rainbow'
+require 'awesome_print'
 require 'genesis/app'
+
+require 'genesis/actions'
 
 
 module Genesis
@@ -9,3 +13,5 @@ module Genesis
     end
   end
 end
+
+AVAIL_ACTIONS = [Genesis::Actions::CreateProject.new]

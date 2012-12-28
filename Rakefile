@@ -45,5 +45,5 @@ GENESIS_EXEC_CONTENT = <<-CODE
 $:.push File.expand_path("../../lib", __FILE__)
 require 'genesis'
 
-Genesis::App.new(ARGV).run
+Genesis::App.new(ARGV, AVAIL_ACTIONS).run
 CODE
