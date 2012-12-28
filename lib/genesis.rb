@@ -1,5 +1,7 @@
 require 'rainbow'
+require 'highline/import'
 require 'awesome_print'
+require 'genesis/shell_util'
 require 'genesis/app'
 
 require 'genesis/actions'
