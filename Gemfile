@@ -5,6 +5,7 @@ gem 'rainbow'
 gem 'highline'
 gem 'awesome_print'
 gem 'monadic'
+gem 'rest-client', :require => 'rest_client'
 
 group :doc do
   gem 'yard'

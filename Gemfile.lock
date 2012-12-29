@@ -5,9 +5,12 @@ GEM
     diff-lcs (1.1.3)
     hashr (0.0.22)
     highline (1.6.15)
+    mime-types (1.19)
     monadic (0.7.3)
     rainbow (1.1.4)
     rake (10.0.3)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
@@ -31,6 +34,7 @@ DEPENDENCIES
   monadic
   rainbow
   rake
+  rest-client
   rspec
   travis-lint
   yard

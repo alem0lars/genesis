@@ -7,13 +7,7 @@ module Genesis
         @opts = opts
         if self.respond_to? :validate_opts
           status, msg = validate_opts
-          unless status
-            if msg
-              raise "Invalid action options: #{msg}"
-            else
-              raise "Invalid action options"
-            end
-          end
+          raise("Invalid action options#{status ? '' : ": #{msg}"}") unless status
           [status, msg]
         else
           [true, 'Options setup success']

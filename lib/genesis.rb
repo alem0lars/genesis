@@ -1,9 +1,13 @@
 require 'rainbow'
 require 'highline/import'
 require 'awesome_print'
+require 'monadic'
+require 'json'
+require 'rest_client'
+
 require 'genesis/shell_util'
 require 'genesis/app'
-
+require 'genesis/git_handlers'
 require 'genesis/actions'
 
 
