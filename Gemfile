@@ -4,6 +4,7 @@ gem 'rake'
 gem 'rainbow'
 gem 'highline'
 gem 'awesome_print'
+gem 'monadic'
 
 group :doc do
   gem 'yard'
